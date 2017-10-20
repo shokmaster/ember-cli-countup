@@ -1,88 +1,26 @@
-# Ember-countup
+# ember-countup
 
-A [countUp.js](https://inorganik.github.io/countUp.js/) integration for Ember
+This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-`ember install ember-countup`
+* `git clone <repository-url>` this repository
+* `cd ember-countup`
+* `npm install`
 
-## Usage
+## Running
 
-Basic example
-```handlebars
-{{count-up startVal=0 endVal=42 duration=2}}
-```
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
-Full example, showing default values
-```handlebars
-{{count-up
-    startVal=0
-    endVal=42
-    duration=2
-    decimals=0
-    useEasing=false
-    useGrouping=false
-    separator=','
-    decimal='.'
-    prefix=''
-    suffix=''}}
-```
+## Running Tests
 
-Example using [formattingFn](https://github.com/inorganik/countUp.js/blob/1.7.1/countUp.js#L52)
-```handlebars
-{{count-up
-    startVal=0
-    endVal=42
-    duration=2
-    formattingFn=customFormatting}}
-```
+* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `ember test`
+* `ember test --server`
 
-```javascript
-customFormatting: function(nStr) {
-  // I get called on every count up step
-}
-```
+## Building
 
-Example using [easingFn](https://github.com/inorganik/countUp.js#custom-easing)
-```handlebars
-{{count-up
-    startVal=0
-    endVal=42
-    duration=2
-    easingFn=customEasing}}
-```
+* `ember build`
 
-```javascript
-customEasing: function(t, b, c, d) {
-    var ts = (t /= d) * t;
-    var tc = ts * t;
-    return b + c * (1.77635683940025e-15 * tc * ts + 0.999999999999998 * tc + -3 * ts + 3 * t);
-}
-```
-
-Example using the [onComplete callback](https://github.com/inorganik/countUp.js#usage)
-```handlebars
-{{count-up
-    startVal=0
-    endVal=42
-    duration=2
-    onComplete=(action 'showMessage')}}
-```
-
-```javascript
-actions: {
-  showMessage() {
-    alert('count up done');
-  }
-}
-```
-
-Check out the [dummy app](https://github.com/pogopaule/ember-countup/tree/master/tests/dummy/app) for a working example.
-
-## Styling
-
-Style a `span` with the class `.ember-countup`:
-
-```html
-<span id="ember389" class="ember-view ember-countup">42</span>
-```
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
