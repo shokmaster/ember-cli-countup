@@ -1,6 +1,6 @@
 {
   "name": "ember-countup",
-  "version": "0.0.0",
+  "version": "0.0.6",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -22,7 +22,7 @@
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^2.0.0",
     "broccoli-stew":"^1.5.0",
-    "countup.js": "^1.9.2"
+    "countup.js": "1.7.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -43,7 +43,7 @@
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.3",
     "loader.js": "^4.2.3",
-    "countup.js": "^1.9.2"
+    "countup.js": "1.7.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
